@@ -47,6 +47,7 @@ img {
   max-width: 100%; }
 
 h1, h2, h3, h4, h5 {
+  letter-spacing: -.004em;
   line-height: 1;
   margin: 0 0 0.5rem; }
 
@@ -81,6 +82,8 @@ strong {
 .flex-row {
   display: flex;
   flex-wrap: wrap; }
+  .flex-row img {
+    margin-bottom: 0.5em; }
 
 .full-width {
   padding: 0 2em; }
@@ -101,10 +104,11 @@ strong {
   order: 2; }
 
 .form-right {
+  margin-bottom: 2em;
   padding: 0; }
 
 .hero-image {
-  margin-bottom: 3em; }
+  margin-bottom: 2em; }
   .hero-image img {
     margin-bottom: -7em; }
   .hero-image h1 {
@@ -229,3 +233,49 @@ footer p {
 
 .logo {
   max-width: 20em; }
+
+@media (max-width: 540px) {
+  .hero-image h1 {
+    font-size: 1.5em;
+    line-height: 1.1;
+    margin-top: 0;
+    padding: 1.5rem; }
+  .hero-image {
+    display: flex;
+    flex-direction: column; }
+    .hero-image img {
+      margin-bottom: 0em; }
+  header {
+    padding: 1em 1.5em; }
+  footer {
+    display: block; }
+  .logo {
+    max-width: 100%; }
+  .col-md-8, .col-sm-8, .col-md-4, .col-sm-4, .col-md-6, .col-sm-6 {
+    width: 100%; }
+  .form-right {
+    order: 0; }
+  .promo {
+    display: grid;
+    margin-left: -2em;
+    margin-right: -2em; }
+  .promo-img {
+    height: 4.5em;
+    position: relative;
+    width: 4.5em; }
+  .promo-content {
+    width: 100%; }
+  .flex-row img {
+    margin-left: -2em;
+    margin-right: -2em;
+    max-width: 100vw; }
+  .cta-primary, .promo-content .cta-primary {
+    margin-left: 1rem;
+    margin-right: 1rem; }
+  .promo-content p, .promo-content h3 {
+    padding: 0 1.5rem; }
+  .content-left {
+    margin: 0;
+    padding: 0; }
+    .content-left .full-width {
+      padding: 0; } }
