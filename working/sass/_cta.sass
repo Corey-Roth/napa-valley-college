@@ -13,3 +13,11 @@
 	color: $orange
 	display: inline-block
 	margin-bottom: 2em
+	text-decoration: none
+	&:after
+		content: url(assets/link-arrow.svg)
+		margin-left: 0.25em
+		position: relative
+		top: 1px
+	&:hover
+		color: darken($orange, 20%)

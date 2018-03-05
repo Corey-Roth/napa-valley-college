@@ -168,7 +168,15 @@ button {
 .cta-secondary {
   color: #BF410A;
   display: inline-block;
-  margin-bottom: 2em; }
+  margin-bottom: 2em;
+  text-decoration: none; }
+  .cta-secondary:after {
+    content: url(assets/link-arrow.svg);
+    margin-left: 0.25em;
+    position: relative;
+    top: 1px; }
+  .cta-secondary:hover {
+    color: #5e2005; }
 
 .promo {
   border: 1px solid #C0C0C0;
@@ -182,11 +190,8 @@ button {
   display: flex;
   height: 100%;
   justify-content: center;
-  order: 2;
-  overflow: hidden;
   overflow: hidden;
   position: absolute;
-  right: 0;
   top: 0;
   width: 25%; }
   .promo-img img {
@@ -215,8 +220,18 @@ button {
   .promo-content .cta-primary {
     margin: 0 1rem 1rem; }
 
+.image-right .promo-img {
+  right: 0;
+  order: 2; }
+
+.image-left .promo-img {
+  position: static; }
+
 footer.default-gutter {
   padding: 2em; }
+
+.social-links a {
+  text-decoration: none; }
 
 .social-links img {
   max-width: 2em; }
@@ -233,6 +248,12 @@ footer p {
 
 .logo {
   max-width: 20em; }
+
+@media (max-width: 991px) {
+  .form-right {
+    width: 40%; }
+  .content-left {
+    width: 60%; } }
 
 @media (max-width: 540px) {
   .hero-image h1 {
@@ -256,13 +277,18 @@ footer p {
   .form-right {
     order: 0; }
   .promo {
-    display: grid;
+    display: block;
     margin-left: -2em;
     margin-right: -2em; }
   .promo-img {
-    height: 4.5em;
+    float: right;
+    margin-right: 2em;
+    height: 8em;
+    margin-bottom: 2em;
+    margin-left: 1em;
+    margin-top: 3em;
     position: relative;
-    width: 4.5em; }
+    width: 8em; }
   .promo-content {
     width: 100%; }
   .flex-row img {
@@ -274,6 +300,8 @@ footer p {
     margin-right: 1rem; }
   .promo-content p, .promo-content h3 {
     padding: 0 1.5rem; }
+  .promo-content .eyebrow {
+    margin-bottom: 1em; }
   .content-left {
     margin: 0;
     padding: 0; }
