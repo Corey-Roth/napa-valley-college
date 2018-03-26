@@ -64,6 +64,11 @@ p {
   padding: 0; }
 
 header {
+  background: url("https://go.pardot.com/l/422132/2018-03-24/2361nf/422132/210544/supergraphic.png");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: auto 72px;
+  border-bottom: 1px solid #C0C0C0;
   padding: 1em 2em; }
 
 footer {
@@ -121,7 +126,7 @@ strong {
     width: 100%;
     z-index: 1; }
 
-form {
+.form-right {
   background: #F2F2F2;
   border: 1px solid #C0C0C0;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.07), 0 15px 35px 0 rgba(0, 0, 0, 0.1);
@@ -137,14 +142,21 @@ input, select, textarea {
   width: 100%; }
 
 input[type="checkbox"] {
+  position: relative;
+  top: 3px;
   width: auto; }
 
 .inline {
   display: inline-block; }
 
+.form-group label.inline {
+  color: #2E2E2F;
+  font-weight: 700; }
+
 .value span {
   align-items: start;
-  display: flex; }
+  display: flex;
+  margin: 0.5em 0; }
 
 button {
   border: 0 none;
@@ -158,6 +170,10 @@ button {
   .form-group label {
     color: #BF410A;
     font-size: 0.875em; }
+  .form-group.pd-checkbox {
+    background: none;
+    border: 0 none;
+    padding: 0; }
 
 .content-left {
   margin: 0 -1em; }
@@ -173,6 +189,7 @@ button {
   font-size: 1.1em;
   font-weight: bold;
   line-height: 1;
+  margin: 0 0 2rem;
   padding: 1rem 2rem; }
 
 .cta-secondary {
@@ -181,7 +198,7 @@ button {
   margin-bottom: 2em;
   text-decoration: none; }
   .cta-secondary:after {
-    content: url(assets/link-arrow.svg);
+    content: url("https://go.pardot.com/l/422132/2018-03-24/2361nh/422132/210546/link_arrow.png");
     margin-left: 0.25em;
     position: relative;
     top: 1px; }
@@ -264,6 +281,12 @@ footer p {
     width: 40%; }
   .content-left {
     width: 60%; } }
+
+@media (max-width: 800px) {
+  header {
+    background-image: none;
+    display: flex;
+    justify-content: center; } }
 
 @media (max-width: 540px) {
   .hero-image h1 {
